@@ -17,11 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('usuarios', 'RegisterUserController@index');
-Route::get('usuario/{id}', 'RegisterUserController@show');
-Route::post('crear', 'RegisterUserController@store');
-Route::put('editar/{id}', 'RegisterUserController@update');
-Route::delete('borrar/{id}', 'RegisterUserController@destroy');
+Route::get('register_users', 'RegisterUserController@index');
+Route::get('register_users/{id}', 'RegisterUserController@show');
+Route::post('register_users', 'RegisterUserController@store');
+Route::put('register_users/{id}', 'RegisterUserController@update');
+Route::delete('register_users/{id}', 'RegisterUserController@destroy');
 
 Route::post('signup', 'AuthController@register');
 Route::post('login', 'AuthController@login');
